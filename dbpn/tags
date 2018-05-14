@@ -1,0 +1,112 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ConvBlock	base_networks.py	/^class ConvBlock(torch.nn.Module):$/;"	c
+D_DownBlock	base_networks.py	/^class D_DownBlock(torch.nn.Module):$/;"	c
+D_DownBlockPix	base_networks.py	/^class D_DownBlockPix(torch.nn.Module):$/;"	c
+D_UpBlock	base_networks.py	/^class D_UpBlock(torch.nn.Module):$/;"	c
+D_UpBlockPix	base_networks.py	/^class D_UpBlockPix(torch.nn.Module):$/;"	c
+DatasetFromFolder	dataset.py	/^class DatasetFromFolder(data.Dataset):$/;"	c
+DatasetFromFolderEval	dataset.py	/^class DatasetFromFolderEval(data.Dataset):$/;"	c
+DeconvBlock	base_networks.py	/^class DeconvBlock(torch.nn.Module):$/;"	c
+DenseBlock	base_networks.py	/^class DenseBlock(torch.nn.Module):$/;"	c
+DownBlock	base_networks.py	/^class DownBlock(torch.nn.Module):$/;"	c
+DownBlockPix	base_networks.py	/^class DownBlockPix(torch.nn.Module):$/;"	c
+Net	dbpn.py	/^class Net(nn.Module):$/;"	c
+Net	dbpn_v1.py	/^class Net(nn.Module):$/;"	c
+Net	dbpns.py	/^class Net(nn.Module):$/;"	c
+PSBlock	base_networks.py	/^class PSBlock(torch.nn.Module):$/;"	c
+ResnetBlock	base_networks.py	/^class ResnetBlock(torch.nn.Module):$/;"	c
+UpBlock	base_networks.py	/^class UpBlock(torch.nn.Module):$/;"	c
+UpBlockPix	base_networks.py	/^class UpBlockPix(torch.nn.Module):$/;"	c
+Upsample2xBlock	base_networks.py	/^class Upsample2xBlock(torch.nn.Module):$/;"	c
+Upsampler	base_networks.py	/^class Upsampler(torch.nn.Module):$/;"	c
+__getitem__	dataset.py	/^    def __getitem__(self, index):$/;"	m	class:DatasetFromFolder	file:
+__getitem__	dataset.py	/^    def __getitem__(self, index):$/;"	m	class:DatasetFromFolderEval	file:
+__init__	base_networks.py	/^    def __init__(self, input_size, output_size, bias=True, activation='relu', norm='batch'):$/;"	m	class:DenseBlock
+__init__	base_networks.py	/^    def __init__(self, input_size, output_size, bias=True, upsample='deconv', activation='relu', norm='batch'):$/;"	m	class:Upsample2xBlock
+__init__	base_networks.py	/^    def __init__(self, input_size, output_size, kernel_size=3, stride=1, padding=1, bias=True, activation='prelu', norm=None):$/;"	m	class:ConvBlock
+__init__	base_networks.py	/^    def __init__(self, input_size, output_size, kernel_size=4, stride=2, padding=1, bias=True, activation='prelu', norm=None):$/;"	m	class:DeconvBlock
+__init__	base_networks.py	/^    def __init__(self, input_size, output_size, scale_factor, kernel_size=3, stride=1, padding=1, bias=True, activation='prelu', norm='batch'):$/;"	m	class:PSBlock
+__init__	base_networks.py	/^    def __init__(self, num_filter, kernel_size=3, stride=1, padding=1, bias=True, activation='prelu', norm='batch'):$/;"	m	class:ResnetBlock
+__init__	base_networks.py	/^    def __init__(self, num_filter, kernel_size=8, stride=4, padding=2, bias=True, activation='prelu', norm=None):$/;"	m	class:DownBlock
+__init__	base_networks.py	/^    def __init__(self, num_filter, kernel_size=8, stride=4, padding=2, bias=True, activation='prelu', norm=None):$/;"	m	class:UpBlock
+__init__	base_networks.py	/^    def __init__(self, num_filter, kernel_size=8, stride=4, padding=2, num_stages=1, bias=True, activation='prelu', norm=None):$/;"	m	class:D_DownBlock
+__init__	base_networks.py	/^    def __init__(self, num_filter, kernel_size=8, stride=4, padding=2, num_stages=1, bias=True, activation='prelu', norm=None):$/;"	m	class:D_UpBlock
+__init__	base_networks.py	/^    def __init__(self, num_filter, kernel_size=8, stride=4, padding=2, num_stages=1, scale=4, bias=True, activation='prelu', norm=None):$/;"	m	class:D_DownBlockPix
+__init__	base_networks.py	/^    def __init__(self, num_filter, kernel_size=8, stride=4, padding=2, num_stages=1, scale=4, bias=True, activation='prelu', norm=None):$/;"	m	class:D_UpBlockPix
+__init__	base_networks.py	/^    def __init__(self, num_filter, kernel_size=8, stride=4, padding=2, scale=4, bias=True, activation='prelu', norm=None):$/;"	m	class:UpBlockPix
+__init__	base_networks.py	/^    def __init__(self, num_filter, kernel_size=8, stride=4, padding=2, scale=4,bias=True, activation='prelu', norm=None):$/;"	m	class:DownBlockPix
+__init__	base_networks.py	/^    def __init__(self, scale, n_feat, bn=False, act='prelu', bias=True):$/;"	m	class:Upsampler
+__init__	dataset.py	/^    def __init__(self, image_dir, lr_dir, patch_size, upscale_factor, dataset, data_augmentation, input_transform=None, target_transform=None):$/;"	m	class:DatasetFromFolder
+__init__	dataset.py	/^    def __init__(self, lr_dir,input_transform=None, target_transform=None):$/;"	m	class:DatasetFromFolderEval
+__init__	dbpn.py	/^    def __init__(self, num_channels, base_filter, feat, num_stages, scale_factor):$/;"	m	class:Net
+__init__	dbpn_v1.py	/^    def __init__(self, num_channels, base_filter, feat, num_stages, scale_factor):$/;"	m	class:Net
+__init__	dbpns.py	/^    def __init__(self, num_channels, base_filter, feat, num_stages, scale_factor):$/;"	m	class:Net
+__len__	dataset.py	/^    def __len__(self):$/;"	m	class:DatasetFromFolder	file:
+__len__	dataset.py	/^    def __len__(self):$/;"	m	class:DatasetFromFolderEval	file:
+_transform	eval.py	/^    def _transform(v, op):$/;"	f	function:x8_forward
+augment	dataset.py	/^def augment(img_in, img_tar, flip_h=True, rot=True):$/;"	f
+calculate_valid_crop_size	data.py	/^def calculate_valid_crop_size(crop_size, upscale_factor):$/;"	f
+checkpoint	main.py	/^def checkpoint(epoch):$/;"	f
+chop_forward	eval.py	/^def chop_forward(x, model, scale, shave=16, min_size=10000, nGPUs=opt.gpus):$/;"	f
+criterion	main.py	/^    criterion = criterion.cuda(gpus_list[0])$/;"	v
+criterion	main.py	/^criterion = nn.L1Loss()$/;"	v
+cuda	eval.py	/^cuda = opt.gpu_mode$/;"	v
+cuda	main.py	/^cuda = opt.gpu_mode$/;"	v
+eval	eval.py	/^def eval():$/;"	f
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:ConvBlock
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:D_DownBlock
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:D_DownBlockPix
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:D_UpBlock
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:D_UpBlockPix
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:DeconvBlock
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:DenseBlock
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:DownBlock
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:DownBlockPix
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:PSBlock
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:ResnetBlock
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:UpBlock
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:UpBlockPix
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:Upsample2xBlock
+forward	base_networks.py	/^    def forward(self, x):$/;"	m	class:Upsampler
+forward	dbpn.py	/^    def forward(self, x):$/;"	m	class:Net
+forward	dbpn_v1.py	/^    def forward(self, x):$/;"	m	class:Net
+forward	dbpns.py	/^    def forward(self, x):$/;"	m	class:Net
+get_eval_set	data.py	/^def get_eval_set(lr_dir):$/;"	f
+get_patch	dataset.py	/^def get_patch(img_in, img_tar,patch_size, scale, ix=-1, iy=-1):$/;"	f
+get_test_set	data.py	/^def get_test_set(data_dir, dataset, hr, upscale_factor,patch_size):$/;"	f
+get_training_set	data.py	/^def get_training_set(data_dir, dataset, hr, upscale_factor, patch_size, data_augmentation):$/;"	f
+gpus_list	eval.py	/^gpus_list=range(opt.gpus)$/;"	v
+gpus_list	main.py	/^gpus_list = range(opt.gpus)$/;"	v
+hostname	main.py	/^hostname = str(socket.gethostname())$/;"	v
+input_transform	data.py	/^def input_transform():$/;"	f
+is_image_file	dataset.py	/^def is_image_file(filename):$/;"	f
+load_img	dataset.py	/^def load_img(filepath):$/;"	f
+model	eval.py	/^    model = DBPN(num_channels=3, base_filter=64,  feat = 256, num_stages=7, scale_factor=opt.upscale_factor) ###D-DBPN$/;"	v
+model	eval.py	/^    model = DBPNLL(num_channels=3, base_filter=64,  feat = 256, num_stages=10, scale_factor=opt.upscale_factor) ##For NTIRE2018$/;"	v
+model	eval.py	/^    model = model.cuda(gpus_list[0])$/;"	v
+model	eval.py	/^    model = torch.nn.DataParallel(model, device_ids=gpus_list)$/;"	v
+model	main.py	/^    model = DBPN(num_channels=3, base_filter=64,  feat = 256, num_stages=7, scale_factor=opt.upscale_factor) ###D-DBPN$/;"	v
+model	main.py	/^    model = DBPNLL(num_channels=3, base_filter=64,  feat = 256, num_stages=10, scale_factor=opt.upscale_factor) ###For NTIRE2018$/;"	v
+model	main.py	/^    model = model.cuda(gpus_list[0])$/;"	v
+model	main.py	/^model = torch.nn.DataParallel(model, device_ids=gpus_list)$/;"	v
+model_name	main.py	/^    model_name = os.path.join(opt.save_folder + opt.pretrained_sr)$/;"	v
+opt	eval.py	/^opt = parser.parse_args()$/;"	v
+opt	main.py	/^opt = parser.parse_args()$/;"	v
+optimizer	main.py	/^optimizer = optim.Adam(model.parameters(), lr=opt.lr, betas=(0.9, 0.999), eps=1e-8)$/;"	v
+parser	eval.py	/^parser = argparse.ArgumentParser(description='PyTorch Super Res Example')$/;"	v
+parser	main.py	/^parser = argparse.ArgumentParser(description='PyTorch Super Res Example')$/;"	v
+print_network	main.py	/^def print_network(net):$/;"	f
+save_img	eval.py	/^def save_img(img, img_name):$/;"	f
+target_transform	data.py	/^def target_transform():$/;"	f
+test	main.py	/^def test():$/;"	f
+test_set	eval.py	/^test_set = get_eval_set(os.path.join(opt.input_dir,opt.test_dataset))$/;"	v
+testing_data_loader	eval.py	/^testing_data_loader = DataLoader(dataset=test_set, num_workers=opt.threads, batch_size=opt.testBatchSize, shuffle=False)$/;"	v
+train	main.py	/^def train(epoch):$/;"	f
+train_set	main.py	/^train_set = get_training_set(opt.data_dir, opt.train_dataset, opt.hr_train_dataset, opt.upscale_factor, opt.patch_size, opt.data_augmentation)$/;"	v
+training_data_loader	main.py	/^training_data_loader = DataLoader(dataset=train_set, num_workers=opt.threads, batch_size=opt.batchSize, shuffle=True)$/;"	v
+x8_forward	eval.py	/^def x8_forward(img, model, precision='single'):$/;"	f
