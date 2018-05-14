@@ -1,0 +1,77 @@
+diff --git a/data/__init__.py b/data/__init__.py
+index a67c1cf..32f83f0 100644
+--- a/data/__init__.py
++++ b/data/__init__.py
+@@ -1,6 +1,6 @@
+ from .voc0712 import VOCDetection, VOCAnnotationTransform, VOC_CLASSES, VOC_ROOT
+ 
+-from .coco import COCODetection, COCOAnnotationTransform, COCO_CLASSES, COCO_ROOT, get_label_map
++#from .coco import COCODetection, COCOAnnotationTransform, COCO_CLASSES, COCO_ROOT, get_label_map
+ from .config import *
+ import torch
+ import cv2
+diff --git a/eval.py b/eval.py
+index 217f045..4a8c672 100644
+--- a/eval.py
++++ b/eval.py
+@@ -390,7 +390,7 @@ def test_net(save_folder, net, cuda, dataset, transform, top_k,
+             dets = detections[0, j, :]
+             mask = dets[:, 0].gt(0.).expand(5, dets.size(0)).t()
+             dets = torch.masked_select(dets, mask).view(-1, 5)
+-            if dets.dim() == 0:
++            if dets.size(0) == 0:
+                 continue
+             boxes = dets[:, 1:]
+             boxes[:, 0] *= w
+diff --git a/layers/functions/detection.py b/layers/functions/detection.py
+index 0d1ef8d..acdcef0 100644
+--- a/layers/functions/detection.py
++++ b/layers/functions/detection.py
+@@ -46,7 +46,7 @@ class Detect(Function):
+             for cl in range(1, self.num_classes):
+                 c_mask = conf_scores[cl].gt(self.conf_thresh)
+                 scores = conf_scores[cl][c_mask]
+-                if scores.dim() == 0:
++                if scores.size(0) == 0:
+                     continue
+                 l_mask = c_mask.unsqueeze(1).expand_as(decoded_boxes)
+                 boxes = decoded_boxes[l_mask].view(-1, 4)
+diff --git a/layers/modules/multibox_loss.py b/layers/modules/multibox_loss.py
+index fb49cf4..ca23b91 100644
+--- a/layers/modules/multibox_loss.py
++++ b/layers/modules/multibox_loss.py
+@@ -94,8 +94,9 @@ class MultiBoxLoss(nn.Module):
+         loss_c = log_sum_exp(batch_conf) - batch_conf.gather(1, conf_t.view(-1, 1))
+ 
+         # Hard Negative Mining
+-        loss_c[pos] = 0  # filter out pos boxes for now
+         loss_c = loss_c.view(num, -1)
++        loss_c[pos] = 0  # filter out pos boxes for now
++        # loss_c = loss_c.view(num, -1)
+         _, loss_idx = loss_c.sort(1, descending=True)
+         _, idx_rank = loss_idx.sort(1)
+         num_pos = pos.long().sum(1, keepdim=True)
+@@ -112,6 +113,6 @@ class MultiBoxLoss(nn.Module):
+         # Sum of losses: L(x,c,l,g) = (Lconf(x, c) + αLloc(x,l,g)) / N
+ 
+         N = num_pos.data.sum()
+-        loss_l /= N
+-        loss_c /= N
++        loss_l /= N.float()
++        loss_c /= N.float()
+         return loss_l, loss_c
+diff --git a/train.py b/train.py
+index 427dd92..a66adbe 100644
+--- a/train.py
++++ b/train.py
+@@ -81,8 +81,8 @@ def train():
+                                 transform=SSDAugmentation(cfg['min_dim'],
+                                                           MEANS))
+     elif args.dataset == 'VOC':
+-        if args.dataset_root == COCO_ROOT:
+-            parser.error('Must specify dataset if specifying dataset_root')
++        #if args.dataset_root == COCO_ROOT:
++        #    parser.error('Must specify dataset if specifying dataset_root')
+         cfg = voc
+         dataset = VOCDetection(root=args.dataset_root,
+                                transform=SSDAugmentation(cfg['min_dim'],
