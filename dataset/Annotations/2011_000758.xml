@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_000758.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>cat</name>
+		<bndbox>
+			<xmax>136</xmax>
+			<xmin>1</xmin>
+			<ymax>188</ymax>
+			<ymin>54</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>1</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>cat</name>
+		<bndbox>
+			<xmax>220</xmax>
+			<xmin>34</xmin>
+			<ymax>330</ymax>
+			<ymin>69</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>cat</name>
+		<bndbox>
+			<xmax>497</xmax>
+			<xmin>273</xmin>
+			<ymax>206</ymax>
+			<ymin>68</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>1</segmented>
+	<size>
+		<depth>3</depth>
+		<height>332</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

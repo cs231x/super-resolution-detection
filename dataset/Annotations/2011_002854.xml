@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_002854.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>boat</name>
+		<bndbox>
+			<xmax>236</xmax>
+			<xmin>166</xmin>
+			<ymax>321</ymax>
+			<ymin>273</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>boat</name>
+		<bndbox>
+			<xmax>162</xmax>
+			<xmin>84</xmin>
+			<ymax>321</ymax>
+			<ymin>295</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Right</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>boat</name>
+		<bndbox>
+			<xmax>500</xmax>
+			<xmin>454</xmin>
+			<ymax>316</ymax>
+			<ymin>288</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>375</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

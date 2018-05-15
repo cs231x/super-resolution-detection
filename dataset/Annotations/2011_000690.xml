@@ -1,0 +1,41 @@
+<annotation>
+	<filename>2011_000690.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>bicycle</name>
+		<bndbox>
+			<xmax>99</xmax>
+			<xmin>5</xmin>
+			<ymax>494</ymax>
+			<ymin>1</ymin>
+		</bndbox>
+		<difficult>1</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+	</object>
+	<object>
+		<name>bicycle</name>
+		<bndbox>
+			<xmax>372</xmax>
+			<xmin>72</xmin>
+			<ymax>499</ymax>
+			<ymin>1</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>500</height>
+		<width>375</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

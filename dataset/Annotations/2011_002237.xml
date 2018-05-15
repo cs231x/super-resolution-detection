@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_002237.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>bottle</name>
+		<bndbox>
+			<xmax>228</xmax>
+			<xmin>205</xmin>
+			<ymax>337</ymax>
+			<ymin>297</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+	</object>
+	<object>
+		<name>person</name>
+		<bndbox>
+			<xmax>244</xmax>
+			<xmin>55</xmin>
+			<ymax>337</ymax>
+			<ymin>80</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Frontal</pose>
+		<truncated>1</truncated>
+	</object>
+	<object>
+		<name>person</name>
+		<bndbox>
+			<xmax>425</xmax>
+			<xmin>246</xmin>
+			<ymax>337</ymax>
+			<ymin>68</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Frontal</pose>
+		<truncated>1</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>337</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

@@ -1,0 +1,43 @@
+<annotation>
+	<filename>2011_005191.jpg</filename>
+	<folder>VOC2011</folder>
+	<object>
+		<name>person</name>
+		<actions>
+			<jumping>0</jumping>
+			<other>1</other>
+			<phoning>0</phoning>
+			<playinginstrument>0</playinginstrument>
+			<reading>0</reading>
+			<ridingbike>0</ridingbike>
+			<ridinghorse>0</ridinghorse>
+			<running>0</running>
+			<takingphoto>0</takingphoto>
+			<usingcomputer>0</usingcomputer>
+			<walking>0</walking>
+		</actions>
+		<bndbox>
+			<xmax>195</xmax>
+			<xmin>139</xmin>
+			<ymax>184</ymax>
+			<ymin>99</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<pose>Unspecified</pose>
+		<point>
+			<x>162</x>
+			<y>132</y>
+		</point>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>375</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

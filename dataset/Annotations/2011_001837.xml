@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_001837.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>tvmonitor</name>
+		<bndbox>
+			<xmax>141</xmax>
+			<xmin>75</xmin>
+			<ymax>138</ymax>
+			<ymin>82</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>person</name>
+		<bndbox>
+			<xmax>194</xmax>
+			<xmin>162</xmin>
+			<ymax>175</ymax>
+			<ymin>144</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Rear</pose>
+		<truncated>1</truncated>
+	</object>
+	<object>
+		<name>sofa</name>
+		<bndbox>
+			<xmax>229</xmax>
+			<xmin>125</xmin>
+			<ymax>218</ymax>
+			<ymin>161</ymin>
+		</bndbox>
+		<difficult>1</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>240</height>
+		<width>320</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

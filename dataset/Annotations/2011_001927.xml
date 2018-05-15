@@ -1,0 +1,28 @@
+<annotation>
+	<filename>2011_001927.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>train</name>
+		<bndbox>
+			<xmax>324</xmax>
+			<xmin>163</xmin>
+			<ymax>202</ymax>
+			<ymin>170</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>333</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

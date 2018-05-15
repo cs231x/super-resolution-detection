@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_001302.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>tvmonitor</name>
+		<bndbox>
+			<xmax>174</xmax>
+			<xmin>48</xmin>
+			<ymax>129</ymax>
+			<ymin>15</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Frontal</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>tvmonitor</name>
+		<bndbox>
+			<xmax>288</xmax>
+			<xmin>161</xmin>
+			<ymax>115</ymax>
+			<ymin>4</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Frontal</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>tvmonitor</name>
+		<bndbox>
+			<xmax>411</xmax>
+			<xmin>284</xmin>
+			<ymax>128</ymax>
+			<ymin>13</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Frontal</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>333</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

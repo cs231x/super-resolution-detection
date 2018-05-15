@@ -1,0 +1,41 @@
+<annotation>
+	<filename>2011_002063.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>horse</name>
+		<bndbox>
+			<xmax>467</xmax>
+			<xmin>311</xmin>
+			<ymax>375</ymax>
+			<ymin>184</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>1</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>person</name>
+		<bndbox>
+			<xmax>251</xmax>
+			<xmin>53</xmin>
+			<ymax>295</ymax>
+			<ymin>41</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Right</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>375</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

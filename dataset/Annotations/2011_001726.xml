@@ -1,0 +1,41 @@
+<annotation>
+	<filename>2011_001726.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>tvmonitor</name>
+		<bndbox>
+			<xmax>233</xmax>
+			<xmin>155</xmin>
+			<ymax>199</ymax>
+			<ymin>132</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Frontal</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>pottedplant</name>
+		<bndbox>
+			<xmax>395</xmax>
+			<xmin>291</xmin>
+			<ymax>251</ymax>
+			<ymin>56</ymin>
+		</bndbox>
+		<difficult>1</difficult>
+		<occluded>1</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>1</segmented>
+	<size>
+		<depth>3</depth>
+		<height>375</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

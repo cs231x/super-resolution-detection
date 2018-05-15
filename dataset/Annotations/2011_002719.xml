@@ -1,0 +1,41 @@
+<annotation>
+	<filename>2011_002719.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>cow</name>
+		<bndbox>
+			<xmax>355</xmax>
+			<xmin>233</xmin>
+			<ymax>245</ymax>
+			<ymin>174</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Right</pose>
+		<truncated>1</truncated>
+	</object>
+	<object>
+		<name>cow</name>
+		<bndbox>
+			<xmax>236</xmax>
+			<xmin>157</xmin>
+			<ymax>258</ymax>
+			<ymin>169</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Frontal</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>375</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

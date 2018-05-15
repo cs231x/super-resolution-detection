@@ -1,0 +1,41 @@
+<annotation>
+	<filename>2011_001810.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>sheep</name>
+		<bndbox>
+			<xmax>205</xmax>
+			<xmin>159</xmin>
+			<ymax>191</ymax>
+			<ymin>155</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Right</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>sheep</name>
+		<bndbox>
+			<xmax>338</xmax>
+			<xmin>288</xmin>
+			<ymax>177</ymax>
+			<ymin>141</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Left</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>1</segmented>
+	<size>
+		<depth>3</depth>
+		<height>333</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

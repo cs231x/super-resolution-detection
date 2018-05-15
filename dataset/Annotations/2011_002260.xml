@@ -1,0 +1,41 @@
+<annotation>
+	<filename>2011_002260.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>chair</name>
+		<bndbox>
+			<xmax>185</xmax>
+			<xmin>43</xmin>
+			<ymax>375</ymax>
+			<ymin>228</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>chair</name>
+		<bndbox>
+			<xmax>334</xmax>
+			<xmin>177</xmin>
+			<ymax>375</ymax>
+			<ymin>280</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>375</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

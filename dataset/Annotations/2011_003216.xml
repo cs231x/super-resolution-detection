@@ -1,0 +1,28 @@
+<annotation>
+	<filename>2011_003216.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>cat</name>
+		<bndbox>
+			<xmax>400</xmax>
+			<xmin>164</xmin>
+			<ymax>300</ymax>
+			<ymin>1</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Left</pose>
+		<truncated>1</truncated>
+	</object>
+	<segmented>1</segmented>
+	<size>
+		<depth>3</depth>
+		<height>300</height>
+		<width>400</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

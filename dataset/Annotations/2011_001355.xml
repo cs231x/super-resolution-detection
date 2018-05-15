@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_001355.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>bus</name>
+		<bndbox>
+			<xmax>417</xmax>
+			<xmin>121</xmin>
+			<ymax>309</ymax>
+			<ymin>60</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Frontal</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>bus</name>
+		<bndbox>
+			<xmax>483</xmax>
+			<xmin>257</xmin>
+			<ymax>254</ymax>
+			<ymin>91</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>1</occluded>
+		<pose>Right</pose>
+		<truncated>1</truncated>
+	</object>
+	<object>
+		<name>bus</name>
+		<bndbox>
+			<xmax>70</xmax>
+			<xmin>16</xmin>
+			<ymax>330</ymax>
+			<ymin>73</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>383</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

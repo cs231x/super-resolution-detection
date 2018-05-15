@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_000898.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>motorbike</name>
+		<bndbox>
+			<xmax>264</xmax>
+			<xmin>40</xmin>
+			<ymax>279</ymax>
+			<ymin>76</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Left</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>motorbike</name>
+		<bndbox>
+			<xmax>356</xmax>
+			<xmin>160</xmin>
+			<ymax>243</ymax>
+			<ymin>81</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>1</occluded>
+		<pose>Left</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>motorbike</name>
+		<bndbox>
+			<xmax>400</xmax>
+			<xmin>252</xmin>
+			<ymax>223</ymax>
+			<ymin>75</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>1</occluded>
+		<pose>Left</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>375</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

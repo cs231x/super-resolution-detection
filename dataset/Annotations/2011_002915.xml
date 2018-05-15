@@ -1,0 +1,55 @@
+<annotation>
+	<filename>2011_002915.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>person</name>
+		<bndbox>
+			<xmax>398</xmax>
+			<xmin>253</xmin>
+			<ymax>375</ymax>
+			<ymin>128</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Frontal</pose>
+		<truncated>1</truncated>
+		<part>
+			<name>head</name>
+			<bndbox>
+				<xmin>310</xmin>
+				<ymin>128</ymin>
+				<xmax>351</xmax>
+				<ymax>178</ymax>
+			</bndbox>
+		</part>
+		<part>
+			<name>hand</name>
+			<bndbox>
+				<xmin>254</xmin>
+				<ymin>294</ymin>
+				<xmax>271</xmax>
+				<ymax>326</ymax>
+			</bndbox>
+		</part>
+		<part>
+			<name>hand</name>
+			<bndbox>
+				<xmin>378</xmin>
+				<ymin>307</ymin>
+				<xmax>397</xmax>
+				<ymax>334</ymax>
+			</bndbox>
+		</part>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>375</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

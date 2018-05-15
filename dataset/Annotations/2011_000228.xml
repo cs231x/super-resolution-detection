@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_000228.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>cow</name>
+		<bndbox>
+			<xmax>361</xmax>
+			<xmin>296</xmin>
+			<ymax>184</ymax>
+			<ymin>153</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Right</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>cow</name>
+		<bndbox>
+			<xmax>296</xmax>
+			<xmin>255</xmin>
+			<ymax>186</ymax>
+			<ymin>165</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>1</occluded>
+		<pose>Right</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>cow</name>
+		<bndbox>
+			<xmax>273</xmax>
+			<xmin>230</xmin>
+			<ymax>190</ymax>
+			<ymin>163</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Right</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>1</segmented>
+	<size>
+		<depth>3</depth>
+		<height>334</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

@@ -1,0 +1,41 @@
+<annotation>
+	<filename>2011_001794.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>sofa</name>
+		<bndbox>
+			<xmax>373</xmax>
+			<xmin>226</xmin>
+			<ymax>357</ymax>
+			<ymin>222</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>1</occluded>
+		<pose>Right</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>person</name>
+		<bndbox>
+			<xmax>205</xmax>
+			<xmin>95</xmin>
+			<ymax>378</ymax>
+			<ymin>88</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>1</segmented>
+	<size>
+		<depth>3</depth>
+		<height>500</height>
+		<width>373</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

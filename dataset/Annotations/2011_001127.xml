@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_001127.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>dog</name>
+		<bndbox>
+			<xmax>265</xmax>
+			<xmin>5</xmin>
+			<ymax>291</ymax>
+			<ymin>96</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>dog</name>
+		<bndbox>
+			<xmax>318</xmax>
+			<xmin>91</xmin>
+			<ymax>281</ymax>
+			<ymin>33</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>1</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>dog</name>
+		<bndbox>
+			<xmax>468</xmax>
+			<xmin>280</xmin>
+			<ymax>216</ymax>
+			<ymin>20</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>307</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

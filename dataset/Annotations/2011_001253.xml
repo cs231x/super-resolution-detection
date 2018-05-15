@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_001253.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>horse</name>
+		<bndbox>
+			<xmax>500</xmax>
+			<xmin>54</xmin>
+			<ymax>449</ymax>
+			<ymin>127</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>1</occluded>
+		<pose>Left</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>car</name>
+		<bndbox>
+			<xmax>498</xmax>
+			<xmin>414</xmin>
+			<ymax>194</ymax>
+			<ymin>168</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Rear</pose>
+		<truncated>1</truncated>
+	</object>
+	<object>
+		<name>person</name>
+		<bndbox>
+			<xmax>290</xmax>
+			<xmin>192</xmin>
+			<ymax>292</ymax>
+			<ymin>64</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Left</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>500</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

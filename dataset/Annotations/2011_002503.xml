@@ -1,0 +1,28 @@
+<annotation>
+	<filename>2011_002503.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>bird</name>
+		<bndbox>
+			<xmax>430</xmax>
+			<xmin>30</xmin>
+			<ymax>361</ymax>
+			<ymin>39</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Right</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>1</segmented>
+	<size>
+		<depth>3</depth>
+		<height>375</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

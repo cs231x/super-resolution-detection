@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_001263.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>aeroplane</name>
+		<bndbox>
+			<xmax>392</xmax>
+			<xmin>185</xmin>
+			<ymax>105</ymax>
+			<ymin>39</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Rear</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>aeroplane</name>
+		<bndbox>
+			<xmax>128</xmax>
+			<xmin>31</xmin>
+			<ymax>305</ymax>
+			<ymin>270</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>aeroplane</name>
+		<bndbox>
+			<xmax>416</xmax>
+			<xmin>373</xmin>
+			<ymax>300</ymax>
+			<ymin>282</ymin>
+		</bndbox>
+		<difficult>1</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>1</segmented>
+	<size>
+		<depth>3</depth>
+		<height>332</height>
+		<width>500</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

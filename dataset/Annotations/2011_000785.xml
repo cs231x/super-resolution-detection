@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_000785.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>car</name>
+		<bndbox>
+			<xmax>292</xmax>
+			<xmin>234</xmin>
+			<ymax>103</ymax>
+			<ymin>81</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>1</occluded>
+		<pose>Right</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>person</name>
+		<bndbox>
+			<xmax>286</xmax>
+			<xmin>125</xmin>
+			<ymax>500</ymax>
+			<ymin>97</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>1</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>person</name>
+		<bndbox>
+			<xmax>332</xmax>
+			<xmin>75</xmin>
+			<ymax>475</ymax>
+			<ymin>200</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>0</segmented>
+	<size>
+		<depth>3</depth>
+		<height>500</height>
+		<width>332</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>

@@ -1,0 +1,54 @@
+<annotation>
+	<filename>2011_002381.jpg</filename>
+	<folder>VOC2012</folder>
+	<object>
+		<name>bird</name>
+		<bndbox>
+			<xmax>368</xmax>
+			<xmin>80</xmin>
+			<ymax>207</ymax>
+			<ymin>9</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Frontal</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>bird</name>
+		<bndbox>
+			<xmax>220</xmax>
+			<xmin>67</xmin>
+			<ymax>484</ymax>
+			<ymin>368</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Left</pose>
+		<truncated>0</truncated>
+	</object>
+	<object>
+		<name>bird</name>
+		<bndbox>
+			<xmax>370</xmax>
+			<xmin>136</xmin>
+			<ymax>442</ymax>
+			<ymin>312</ymin>
+		</bndbox>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<pose>Left</pose>
+		<truncated>0</truncated>
+	</object>
+	<segmented>1</segmented>
+	<size>
+		<depth>3</depth>
+		<height>500</height>
+		<width>405</width>
+	</size>
+	<source>
+		<annotation>PASCAL VOC2011</annotation>
+		<database>The VOC2011 Database</database>
+		<image>flickr</image>
+	</source>
+</annotation>
