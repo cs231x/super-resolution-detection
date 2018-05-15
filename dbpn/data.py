@@ -4,7 +4,7 @@ from six.moves import urllib
 import tarfile
 from torchvision.transforms import Compose, CenterCrop, ToTensor, Resize
 
-from dataset import DatasetFromFolderEval, DatasetFromFolder
+from .dataset import DatasetFromFolderEval, DatasetFromFolder, DatasetFromFolderPair
 
 def calculate_valid_crop_size(crop_size, upscale_factor):
     return crop_size - (crop_size % upscale_factor)
@@ -49,3 +49,8 @@ def get_eval_set(lr_dir):
                              input_transform=input_transform(),
                              target_transform=target_transform())
 
+
+def get_pair_set(lr_dir, hr_dir):
+    return DatasetFromFolderPair(lr_dir, hr_dir,
+                             input_transform=input_transform(),
+                             target_transform=target_transform())

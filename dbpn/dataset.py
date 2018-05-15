@@ -119,3 +119,31 @@ class DatasetFromFolderEval(data.Dataset):
       
     def __len__(self):
         return len(self.image_filenames)
+
+
+# New data loader class for S+D training, returns image pair (input:lr_source, target:hr_reference)
+class DatasetFromFolderPair(data.Dataset):
+    def __init__(self, lr_dir, hr_dir, input_transform=None, target_transform=None):
+        super(DatasetFromFolderPair, self).__init__()
+        self.image_filenames = [join(lr_dir, x) for x in listdir(lr_dir) if is_image_file(x)]
+        self.input_transform = input_transform
+        self.target_transform = target_transform
+        self.hr_dir = hr_dir
+
+    def __getitem__(self, index):
+        input = load_img(self.image_filenames[index])
+        _, file = os.path.split(self.image_filenames[index])
+
+        if self.input_transform:
+            input = self.input_transform(input)
+
+        target_image_filename = join(self.hr_dir, file)
+        target = load_img(target_image_filename)
+
+        if self.target_transform:
+            target = self.target_transform(target)
+
+        return input, target
+
+    def __len__(self):
+        return len(self.image_filenames)
