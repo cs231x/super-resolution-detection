@@ -213,9 +213,9 @@ class SRDetection(data.Dataset):
             self.ids.append((rootpath, line.strip()))
 
     def __getitem__(self, index):
-        im, gt, h, w = self.pull_item(index)
+        im, imo, gt, h, w = self.pull_item(index)
 
-        return im, gt
+        return im, imo, gt
 
     def __len__(self):
         return len(self.ids)
