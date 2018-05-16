@@ -182,3 +182,110 @@ class VOCDetection(data.Dataset):
             tensorized version of img, squeezed
         '''
         return torch.Tensor(self.pull_image(index)).unsqueeze_(0)
+
+
+
+################################
+class SRDetection(data.Dataset):
+    """Super Resolution VOC Detection Dataset Object
+
+    simple data loader to S+D networks, no input transform
+    assume: input => 300x300 / 4: 75x75
+    input is image, target is annotation
+
+    returns:
+        lr_image, hr_image, targets (annotation), height, width (original)
+    """
+
+    def __init__(self, root='../../dataset', image_sets='trainval.txt',
+                 target_transform=VOCAnnotationTransform()):
+        super(SRDetection, self).__init__()
+        self.image_set = image_sets
+        self.target_transform = target_transform
+        self._annopath = osp.join('%s', 'Annotations', '%s.xml')
+        self._image_lr = osp.join('%s', 'VOC12-LR-x4', '%s.jpg')
+        #self._image_sr = osp.join('%s', 'VOC12-SR-x4', '%s.jpg')
+        self._image_hr = osp.join('%s', 'VOC12-HR300', '%s.jpg')
+        self._img_orig = osp.join('%s', 'VOC12-HR', '%s.jpg')
+        self.ids = list()
+        rootpath = root
+        for line in open(osp.join(rootpath, image_sets)):
+            self.ids.append((rootpath, line.strip()))
+
+    def __getitem__(self, index):
+        im, gt, h, w = self.pull_item(index)
+
+        return im, gt
+
+    def __len__(self):
+        return len(self.ids)
+
+    def pull_item(self, index):
+        img_id = self.ids[index]
+
+        target = ET.parse(self._annopath % img_id).getroot()
+        img_lr = cv2.imread(self._image_lr % img_id)
+        # img_hr is ground truth for net SR
+        img_hr = cv2.imread(self._image_hr % img_id)
+        # imag_O is the original HR image, read to get origal H/W
+        imag_O = cv2.imread(self._img_orig % img_id)
+        height, width, channels = imag_O.shape
+
+        if self.target_transform is not None:
+            # target is list of bbox in percentage x/y coordinate
+            target = self.target_transform(target, width, height)
+
+        target = np.array(target)
+        boxes, labels = target[:, :4], target[:, 4]
+        # to rgb
+        img_lr = img_lr[:, :, (2, 1, 0)]
+        img_hr = img_hr[:, :, (2, 1, 0)]
+        # img = img.transpose(2, 0, 1)
+        target = np.hstack((boxes, np.expand_dims(labels, axis=1)))
+        return torch.from_numpy(img_lr).permute(2, 0, 1), torch.from_numpy(img_hr).permute(2, 0, 1), target, height, width
+        # return torch.from_numpy(img), target, height, width
+
+    def pull_image(self, index):
+        '''Returns the original image object at index in PIL form
+
+        Note: not using self.__getitem__(), as any transformations passed in
+        could mess up this functionality.
+
+        Argument:
+            index (int): index of img to show
+        Return:
+            PIL img
+        '''
+        img_id = self.ids[index]
+        return cv2.imread(self._image_lr % img_id, cv2.IMREAD_COLOR), cv2.imread(self._image_hr % img_id, cv2.IMREAD_COLOR)
+
+    def pull_anno(self, index):
+        '''Returns the original annotation of image at index
+
+        Note: not using self.__getitem__(), as any transformations passed in
+        could mess up this functionality.
+
+        Argument:
+            index (int): index of img to get annotation of
+        Return:
+            list:  [img_id, [(label, bbox coords),...]]
+                eg: ('001718', [('dog', (96, 13, 438, 332))])
+        '''
+        img_id = self.ids[index]
+        anno = ET.parse(self._annopath % img_id).getroot()
+        # since use height/width=1/1, so we get ground truth bbox here
+        gt = self.target_transform(anno, 1, 1)
+        return img_id[1], gt
+
+    def pull_tensor(self, index):
+        '''Returns the original image at an index in tensor form
+
+        Note: not using self.__getitem__(), as any transformations passed in
+        could mess up this functionality.
+
+        Argument:
+            index (int): index of img to show
+        Return:
+            tensorized version of img, squeezed
+        '''
+        return torch.Tensor(self.pull_image(index)).unsqueeze_(0)

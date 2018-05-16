@@ -8,6 +8,14 @@ from PIL import Image
 import random
 from random import randrange
 import pdb
+import sys
+import cv2
+
+if sys.version_info[0] == 2:
+    import xml.etree.cElementTree as ET
+else:
+    import xml.etree.ElementTree as ET
+
 
 def is_image_file(filename):
     return any(filename.endswith(extension) for extension in [".png", ".jpg", ".jpeg"])
