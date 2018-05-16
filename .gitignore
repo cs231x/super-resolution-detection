@@ -1,5 +1,7 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+dbpn/__pycache__
+ssd/__pycache__
+torchcv/__pycache__
 *.py[cod]
 *$py.class
 .ipynb_checkpoints/
