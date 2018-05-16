@@ -21,10 +21,12 @@ def detection_collate(batch):
     """
     targets = []
     imgs = []
+    imghr= []
     for sample in batch:
         imgs.append(sample[0])
-        targets.append(torch.FloatTensor(sample[1]))
-    return torch.stack(imgs, 0), targets
+        imghr.append(sample[1])
+        targets.append(torch.FloatTensor(sample[2]))
+    return torch.stack(imgs, 0), torch.stack(imghr, 0), targets
 
 
 def base_transform(image, size, mean):

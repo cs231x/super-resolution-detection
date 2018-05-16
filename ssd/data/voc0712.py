@@ -198,7 +198,7 @@ class SRDetection(data.Dataset):
     """
 
     def __init__(self, root='../../dataset', image_sets='trainval.txt',
-                 target_transform=VOCAnnotationTransform()):
+                 data_mean=(104,117,123), target_transform=VOCAnnotationTransform()):
         super(SRDetection, self).__init__()
         self.image_set = image_sets
         self.target_transform = target_transform
@@ -207,6 +207,7 @@ class SRDetection(data.Dataset):
         #self._image_sr = osp.join('%s', 'VOC12-SR-x4', '%s.jpg')
         self._image_hr = osp.join('%s', 'VOC12-HR300', '%s.jpg')
         self._img_orig = osp.join('%s', 'VOC12-HR', '%s.jpg')
+        self._img_mean = np.array(data_mean, dtype=np.float32)
         self.ids = list()
         rootpath = root
         for line in open(osp.join(rootpath, image_sets)):
@@ -224,9 +225,11 @@ class SRDetection(data.Dataset):
         img_id = self.ids[index]
 
         target = ET.parse(self._annopath % img_id).getroot()
-        img_lr = cv2.imread(self._image_lr % img_id)
+        img_lr = cv2.imread(self._image_lr % img_id).astype(np.float32)
+        img_lr -= self._img_mean
         # img_hr is ground truth for net SR
-        img_hr = cv2.imread(self._image_hr % img_id)
+        img_hr = cv2.imread(self._image_hr % img_id).astype(np.float32)
+        img_hr -= self._img_mean
         # imag_O is the original HR image, read to get origal H/W
         imag_O = cv2.imread(self._img_orig % img_id)
         height, width, channels = imag_O.shape
@@ -242,8 +245,10 @@ class SRDetection(data.Dataset):
         img_hr = img_hr[:, :, (2, 1, 0)]
         # img = img.transpose(2, 0, 1)
         target = np.hstack((boxes, np.expand_dims(labels, axis=1)))
-        return torch.from_numpy(img_lr).permute(2, 0, 1), torch.from_numpy(img_hr).permute(2, 0, 1), target, height, width
+
         # return torch.from_numpy(img), target, height, width
+        # return torch.from_numpy(img_lr).permute(2, 0, 1), torch.from_numpy(img_hr).permute(2, 0, 1), torch.from_numpy(target), height, width
+        return torch.from_numpy(img_lr).permute(2, 0, 1), torch.from_numpy(img_hr).permute(2, 0, 1), target, height, width
 
     def pull_image(self, index):
         '''Returns the original image object at index in PIL form
