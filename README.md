@@ -9,6 +9,9 @@ https://drive.google.com/drive/u/1/folders/1qXuCJbsDp7Hno4JUwanviMIWDJG1-eck
 
 ##### Data Set VOC0712
 
+- Training: VOC12 (17128 images)
+- mAP Test: VOC07 ( 4952 images)
+
 ##### DBPN: Original DBPN-4x model (DIV2K pretrained). Used for 3rd column, and as initial weight for 4th
 
 - SSD300 mAP
