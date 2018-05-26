@@ -31,12 +31,25 @@ https://drive.google.com/drive/u/1/folders/1qXuCJbsDp7Hno4JUwanviMIWDJG1-eck
 
 #### New input Images scaled by imageScale300.ipynb
 
-##### DBPN: Retrained (50 Epochs / VOC12) DBPN-4x model (start with DIV2K pretrained). Used for 3rd column, and as initial weight for 4th
+##### DBPN: Retrained (50 Epochs / VOC12) DBPN-4x model (start with DIV2K pretrained). Used for 5th column, and as initial weight for 6th
 
 - SSD300 mAP
 
 | 300x300 HR   | 300x300 LR (75x75 Bicubic) | 300x300 LR (75x75 Bilinear) | 300x300 LR (75x75 Nearest) | 75x75 LR => DBPNx4 |  75x75 LR => SROD (end-2-end ) |
 |   :---:      |          :---:             |          :---:              |            :---:           |       :---:        |            :---:               |
 |   77.34%     |          48.91%            |          46.92%             |             7.17%          |       49.59%       |             TBD                |
+
+
+
+##### DBPN: Retrained (80 Epochs / VOC12) DBPN-4x model (start with DIV2K pretrained). Used for 5th column, and as initial weight for 6th
+
+- SSD300 mAP
+
+| 300x300 HR   | 300x300 LR (75x75 Bicubic) | 300x300 LR (75x75 Bilinear) | 300x300 LR (75x75 Nearest) | 75x75 LR => DBPNx4 |  75x75 LR => SROD (end-2-end ) |
+|   :---:      |          :---:             |          :---:              |            :---:           |       :---:        |            :---:               |
+|   77.34%     |          48.91%            |          46.92%             |             7.17%          |       49.60%       |             TBD                |
+
+
+
 
 
