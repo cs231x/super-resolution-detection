@@ -15,13 +15,6 @@ from scipy import signal
 from scipy.ndimage.filters import convolve
 from PIL import Image
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--metric', '-m', type=str, default='all', help='metric')
-parser.add_argument(
-    '--original-image', '-o', type=str, required=True, help='original image')
-parser.add_argument(
-    '--compared-image', '-c', type=str, required=True, help='compared image')
-args = parser.parse_args()
 
 
 def _FSpecialGauss(size, sigma):
@@ -196,7 +189,7 @@ def MultiScaleSSIM(img1,
             (mssim[levels - 1]**weights[levels - 1]))
 
 
-def msssim(original, compared):
+def metric_ssim(original, compared):
     if isinstance(original, str):
         original = np.array(Image.open(original).convert('RGB'), dtype=np.float32)
     if isinstance(compared, str):
@@ -208,7 +201,7 @@ def msssim(original, compared):
     return MultiScaleSSIM(original, compared, max_val=255)
 
 
-def psnr(original, compared):
+def metric_psnr(original, compared):
     if isinstance(original, str):
         original = np.array(Image.open(original).convert('RGB'), dtype=np.float32)
     if isinstance(compared, str):
@@ -219,6 +212,14 @@ def psnr(original, compared):
         np.multiply(np.log10(255. * 255. / mse[mse > 0.]), 10.), 0., 99.99)[0]
     return psnr
 
+'''
+parser = argparse.ArgumentParser()
+parser.add_argument('--metric', '-m', type=str, default='all', help='metric')
+parser.add_argument(
+    '--original-image', '-o', type=str, required=True, help='original image')
+parser.add_argument(
+    '--compared-image', '-c', type=str, required=True, help='compared image')
+args = parser.parse_args()
 
 def main():
     if args.metric != 'psnr':
@@ -229,3 +230,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+'''
