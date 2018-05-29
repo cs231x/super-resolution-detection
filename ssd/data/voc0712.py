@@ -226,10 +226,11 @@ class SRDetection(data.Dataset):
 
         target = ET.parse(self._annopath % img_id).getroot()
         img_lr = cv2.imread(self._image_lr % img_id).astype(np.float32)
-        img_lr -= self._img_mean
+        # img_lr -= self._img_mean (same with dbpn SR training, no -mean)
+        img_lr /= 255.           # (SR net expect input range [0.0, 1.0])
         # img_hr is ground truth for net SR
         img_hr = cv2.imread(self._image_hr % img_id).astype(np.float32)
-        img_hr -= self._img_mean
+        # img_hr -= self._img_mean
         # imag_O is the original HR image, read to get origal H/W
         imag_O = cv2.imread(self._img_orig % img_id)
         height, width, channels = imag_O.shape
