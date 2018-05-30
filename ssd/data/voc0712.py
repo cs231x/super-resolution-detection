@@ -96,7 +96,7 @@ class VOCDetection(data.Dataset):
 
     def __init__(self, root,
                  image_sets=[('2007', 'trainval'), ('2012', 'trainval')],
-                 transform=None, target_transform=VOCAnnotationTransform(),
+                 transform=None, target_transform=VOCAnnotationTransform(), sr_path=None,
                  dataset_name='VOC0712'):
         self.root = root
         self.image_set = image_sets
@@ -104,7 +104,12 @@ class VOCDetection(data.Dataset):
         self.target_transform = target_transform
         self.name = dataset_name
         self._annopath = osp.join('%s', 'Annotations', '%s.xml')
-        self._imgpath = osp.join('%s', 'JPEGImages', '%s.jpg')
+        self.sr_path = sr_path
+        if sr_path is None:
+            self._imgpath = osp.join('%s', 'JPEGImages', '%s.jpg')
+        else:
+            # explicitly use SR-ed images location
+            self._imgpath = osp.join(sr_path, '%s.jpg')
         self.ids = list()
         for (year, name) in image_sets:
             rootpath = osp.join(self.root, 'VOC' + year)
@@ -123,7 +128,10 @@ class VOCDetection(data.Dataset):
         img_id = self.ids[index]
 
         target = ET.parse(self._annopath % img_id).getroot()
-        img = cv2.imread(self._imgpath % img_id)
+        if self.sr_path is None:
+            img = cv2.imread(self._imgpath % img_id)
+        else:
+            img = cv2.imread(self._imgpath % img_id[1])
         height, width, channels = img.shape
 
         if self.target_transform is not None:
@@ -151,7 +159,11 @@ class VOCDetection(data.Dataset):
             PIL img
         '''
         img_id = self.ids[index]
-        return cv2.imread(self._imgpath % img_id, cv2.IMREAD_COLOR)
+        if self.sr_path is None:
+            img = self._imgpath % img_id
+        else:
+            img = self._imgpath % img_id[1]
+        return cv2.imread(img, cv2.IMREAD_COLOR)
 
     def pull_anno(self, index):
         '''Returns the original annotation of image at index
@@ -182,6 +194,86 @@ class VOCDetection(data.Dataset):
             tensorized version of img, squeezed
         '''
         return torch.Tensor(self.pull_image(index)).unsqueeze_(0)
+
+
+
+################################
+class DBPNLoader(data.Dataset):
+    """Super Resolution Validation Dataset Object
+
+    simple data loader to DBPN networks, no input transform
+    assume: input => 4: 75x75
+    input is image 
+
+    returns:
+        lr_image, hr_image, imagename (009960.jpg)
+    """
+
+    def __init__(self, root='../../dataset', image_sets='07val32-5702.txt',
+                 data_mean=(104,117,123)):
+        super(DBPNLoader, self).__init__()
+        self.image_set = image_sets
+        self._image_lr = osp.join('%s', 'VOC07-LR-x4', '%s.jpg')
+        #self._image_sr = osp.join('%s', 'VOC07-SR-x4', '%s.jpg')
+        self._image_hr = osp.join('%s', 'VOC07-HR300', '%s.jpg')
+        self._img_mean = np.array(data_mean, dtype=np.float32)
+        self.ids = list()
+        rootpath = root
+        for line in open(osp.join(rootpath, image_sets)):
+            self.ids.append((rootpath, line.strip()))
+
+    def __getitem__(self, index):
+        im, imo, iname = self.pull_item(index)
+
+        return im, imo, iname
+
+    def __len__(self):
+        return len(self.ids)
+
+    def pull_item(self, index):
+        img_id = self.ids[index]
+
+        img_lr = cv2.imread(self._image_lr % img_id).astype(np.float32)
+        # img_lr -= self._img_mean (same with dbpn SR training, no -mean)
+        img_lr /= 255.           # (SR net expect input range [0.0, 1.0])
+        # img_hr is ground truth for DBPN SR
+        img_hr = cv2.imread(self._image_hr % img_id).astype(np.float32)
+        # img_hr -= self._img_mean
+
+        # to rgb
+        img_lr = img_lr[:, :, (2, 1, 0)]
+        img_hr = img_hr[:, :, (2, 1, 0)]
+        # img = img.transpose(2, 0, 1)
+
+        return torch.from_numpy(img_lr).permute(2, 0, 1), torch.from_numpy(img_hr).permute(2, 0, 1), img_id[1] 
+
+    def pull_image(self, index):
+        '''Returns the original image object at index in PIL form
+
+        Note: not using self.__getitem__(), as any transformations passed in
+        could mess up this functionality.
+
+        Argument:
+            index (int): index of img to show
+        Return:
+            PIL img
+        '''
+        img_id = self.ids[index]
+        return cv2.imread(self._image_lr % img_id, cv2.IMREAD_COLOR), cv2.imread(self._image_hr % img_id, cv2.IMREAD_COLOR)
+
+    def pull_tensor(self, index):
+        '''Returns the original image at an index in tensor form
+
+        Note: not using self.__getitem__(), as any transformations passed in
+        could mess up this functionality.
+
+        Argument:
+            index (int): index of img to show
+        Return:
+            tensorized version of img, squeezed
+        '''
+        return torch.Tensor(self.pull_image(index)).unsqueeze_(0)
+
 
 
 
