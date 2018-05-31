@@ -166,7 +166,7 @@ def do_python_eval(set_type, output_dir='output', use_07=True):
     aps = []
     # The PASCAL VOC metric changed in 2010
     use_07_metric = use_07
-    print('VOC07 metric? ' + ('Yes' if use_07_metric else 'No'))
+    # print('VOC07 metric? ' + ('Yes' if use_07_metric else 'No'))
     if not os.path.isdir(output_dir):
         os.mkdir(output_dir)
     for i, cls in enumerate(labelmap):
@@ -178,8 +178,8 @@ def do_python_eval(set_type, output_dir='output', use_07=True):
         # print('AP for {} = {:.4f}'.format(cls, ap))
         with open(os.path.join(output_dir, cls + '_pr.pkl'), 'wb') as f:
             pickle.dump({'rec': rec, 'prec': prec, 'ap': ap}, f)
-    print('Mean AP = {:.4f}'.format(np.mean(aps)))
-    print('~~~~~~~~')
+    # print('Mean AP = {:.4f}'.format(np.mean(aps)))
+    # print('~~~~~~~~')
     # print('Results:')
     # for ap in aps:
     #     print('{:.3f}'.format(ap))
@@ -190,6 +190,7 @@ def do_python_eval(set_type, output_dir='output', use_07=True):
     # print('Results computed with the **unofficial** Python eval code.')
     # print('Results should be very close to the official MATLAB eval code.')
     # print('--------------------------------------------------------------')
+    return np.mean(aps)
 
 
 def voc_ap(rec, prec, use_07_metric=True):
@@ -418,12 +419,13 @@ def test_net(save_folder, net, cuda, dataset, transform, top_k,
         pickle.dump(all_boxes, f, pickle.HIGHEST_PROTOCOL)
 
     print('Evaluating detections')
-    evaluate_detections(all_boxes, output_dir, dataset, set_type)
+    mAP = evaluate_detections(all_boxes, output_dir, dataset, set_type)
+    return mAP
 
 
 def evaluate_detections(box_list, output_dir, dataset, set_type):
     write_voc_results_file(box_list, dataset, set_type)
-    do_python_eval(set_type, output_dir)
+    return do_python_eval(set_type, output_dir)
 
 """
 if __name__ == '__main__':
