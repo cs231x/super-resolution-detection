@@ -44,13 +44,13 @@ https://drive.google.com/drive/u/1/folders/1qXuCJbsDp7Hno4JUwanviMIWDJG1-eck
 
 
 
-##### DBPN: Retrained (100 Epochs / VOC12) DBPN-4x model (start with DIV2K pretrained). Used for 5th column, and as initial weight for 6th
+##### DBPN: Intensively Retrained (100 Epochs / VOC12) DBPN-4x base model (start with DIV2K pretrained). Used for 5th column, and as SROD's initial S-Net weight for 6th
 
 - SSD300 mAP
 
-| 300x300 HR   | 300x300 LR (75x75 Bicubic) | 300x300 LR (75x75 Bilinear) | 300x300 LR (75x75 Nearest) | 75x75 LR => DBPNx4 |  75x75 LR => SROD (end-2-end ) |
-|   :---:      |          :---:             |          :---:              |            :---:           |       :---:        |            :---:               |
-|   77.34%     |          48.91%            |          46.92%             |             7.17%          |       56.08%       |             TBD                |
+| 300x300 HR   | 300x300 LR (75x75 Bicubic) | 300x300 LR (75x75 Bilinear) | 300x300 LR (75x75 Nearest) | 75x75 LR => DBPNx4 |  75x75 LR => SROD (e2e Retrain 16 Epochs) |
+|   :---:      |          :---:             |          :---:              |            :---:           |       :---:        |                   :---:                   |
+|   77.34%     |          48.91%            |          46.92%             |             7.17%          |       56.08%       |                   62.00%                  |
 
 
 
