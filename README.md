@@ -50,7 +50,7 @@ https://drive.google.com/drive/u/1/folders/1qXuCJbsDp7Hno4JUwanviMIWDJG1-eck
 
 | 300x300 HR   | 300x300 LR (75x75 Bicubic) | 300x300 LR (75x75 Bilinear) | 300x300 LR (75x75 Nearest) | 75x75 LR => DBPNx4 |  75x75 LR => SROD (e2e Retrain 16 Epochs) |
 |   :---:      |          :---:             |          :---:              |            :---:           |       :---:        |                   :---:                   |
-|   77.34%     |          48.91%            |          46.92%             |             7.17%          |       56.08%       |                   62.00%                  |
+|   77.34%     |          48.91%            |          46.92%             |             7.17%          |       56.08%       |                   62.89%                  |
 
 
 
