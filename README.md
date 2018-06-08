@@ -54,3 +54,31 @@ https://drive.google.com/drive/u/1/folders/1qXuCJbsDp7Hno4JUwanviMIWDJG1-eck
 
 
 
+
+## Authorship
+
+This project is equally contributed by [Hai Xiao](https://github.com/haishaw) and [Kegang Xu](https://github.com/tosmaster), with extra code components from following authors:
+
+
+## Citation
+
+    @article{SROD2018,
+        Author = {Hai Xiao and Kegang Xu},
+        Title = {A Pytorch Implementation of Super Resolution Object Detection},
+        Journal = {https://github.com/cs231x/super-resolution-detection},
+        Year = {2018}
+    }
+ 
+    @inproceedings{DBPN2018,
+        title={Deep Back-Projection Networks for Super-Resolution},
+        author={Haris, Muhammad and Shakhnarovich, Greg and Ukita, Norimichi},
+        booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+        year={2018}
+    }
+
+    @article{SSD300,
+        Author = {Max deGroot and Ellis Brown},
+        Title = {SSD: Single Shot MultiBox Object Detector, in PyTorch},
+        Journal = {https://github.com/amdegroot/ssd.pytorch},
+        Year = {2017}
+    }
